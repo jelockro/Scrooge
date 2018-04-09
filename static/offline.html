@@ -1,0 +1,45 @@
+<head>
+	<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css">
+	<!--<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css" type="text/css"> -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/cover.css') }}"" type="text/css">
+	<link rel="icon" href="{{ url_for('static',filename='styles/hat32.png') }}">
+	<title>Scrooge- You are offline -service Workers - test</title>
+	
+</head>
+<html>
+   <body class="text-center">
+   	<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+   		<header class = "masthead mb-auto">
+   			<div class="inner">
+   				<image class="logo-hat masthead-brand" src="{{ url_for('static',filename='styles/hat32.png') }}"></image>
+   				<h3 class="masthead-brand">Scrooge</h3>
+   				
+   			</div>
+   		</header>
+
+   		<main role="main" class="inner cover">
+   			<h1 class="cover-heading">Upload Your Receipt</h1>
+				<p class ="lead">Hi my name is Scrooge.  I only care about accounts, receipts, and making money.</p>
+				<!-- <form action = "http://localhost:5000/uploader" method = "POST" 
+		         enctype = "multipart/form-data">
+		        <input type = "file" name = "file" />
+		        <input type = "submit"/>
+	      		</form> -->
+	    </main>
+	    
+	    <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          <p>Icon made by <a title="Freepik" href="http://www.freepik.com">Freepik</a> from <a title="Flaticon" href="http://www.flaticon.com">www.flaticon.com</a></p>
+        </div>
+      </footer>  
+	</div>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  -->
+   </body>
+      <!-- Service worker scripts -->
+      
+      <script type="text/javascript" src="/static/js/main/indexcontroller.js"></script>
+      <script type="text/javascript" src="/static/sw.js"></script>
+      
+
+</html>
