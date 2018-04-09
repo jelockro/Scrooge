@@ -1,0 +1,33 @@
+<html>
+
+<body>
+
+<img src={{receipt.imgurl}}>
+
+
+<!--{% for i in accountFields %}
+
+<div>
+
+<p>{{i.name}}</p>
+
+<p>{{i.description}}</p>
+
+<p> {{i.price}} </p> -->
+<form method = "POST" enctype="multipart/form-data" action = "{{ url_for('upload) }}">
+	<input type=file name=photo>
+	<input type = "submit">
+</form>
+<a href = "{{url_for('receiptView', receipt_id = receipt.id)}}">EDIT</a>
+
+</br>
+
+<a href = "{{url_for('commitReceiptchanges', receipt_id = receipt.id)}}">Commit</a>
+
+</div>
+
+
+<!-- {% endfor %} -->
+</body>
+
+</html>
