@@ -41,18 +41,26 @@ self.addEventListener('activate', function(event){
 
 self.addEventListener('fetch', function(event) {
 	event.respondWith(
-		fetch(event.request).then(function(response) {
-			if (response.status == 404){
-				return new Response("Whoops, not found");
-			}
-			return response;
-		}).catch(function() {
-			return new Response("Uh oh, that totally failed!");
-		}));
+		caches.match(event.request).then(function(response) {
+			if (response) return response;
+			return fetch(event.request);
+		})
+	);
+});
+
+
+		// fetch(event.request).then(function(response) {
+		// 	if (response.status == 404){
+		// 		return new Response("Whoops, not found");
+		// 	}
+		// 	return response;
+		// }).catch(function() {
+		// 	return new Response("Uh oh, that totally failed!");
+		// }));
 	// event.respondWith(
 	// 	fetch('/static/dr-evil.gif')
 	// );
-});
+// });
 
 
 
