@@ -10,6 +10,7 @@ flask = "*"
 gunicorn = "*"
 ansible = "*"
 tesseract = "*"
+flask-uploads = "*"
 
 [requires]
 python_version = "2.7"
